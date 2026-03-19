@@ -3,7 +3,7 @@
 Based on [Bruhfuscator](https://github.com/erxson/Bruhfuscator).
 
 <div align="center" id="alert">
-    <h1>It's buggy, do not use for starter base!</h1>
+    <h1>It's buggy, do not use!</h1>
     <h2>Legacy shit alert</h2>
     <h3>AI slop obfuscator alert</h3>
     <h4>Skid alert</h4>
