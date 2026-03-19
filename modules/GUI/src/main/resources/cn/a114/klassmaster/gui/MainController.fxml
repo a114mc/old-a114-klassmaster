@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane
+        prefHeight="434.51" prefWidth="624.58"
+        xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="cn.a114.klassmaster.gui.impl.MainController"
+>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Open" onAction="#handler$handleOpenFile"/>
+                        <MenuItem mnemonicParsing="false" text="Save all" onAction="#handler$handleSaveFile"/>
+                        <MenuItem mnemonicParsing="false" text="Exit" onAction="#exit"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tools">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handler$obfuscate" text="Obfuscate" />
+                        <MenuItem mnemonicParsing="false" text="Add libraries" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Options">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Garbage collect" onAction="#handler$gc"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" onAction="#handler$help_about"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <children>
+                <VBox
+                        spacing="10.0"
+                        AnchorPane.bottomAnchor="14.0"
+                        AnchorPane.leftAnchor="14.0"
+                        AnchorPane.rightAnchor="14.0"
+                        AnchorPane.topAnchor="14.0"
+                >
+                    <children>
+                        <Label text="Manage Transformers:" />
+                        <ListView fx:id="transformerListView" editable="true" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <TextField fx:id="text" focusTraversable="false" editable="false" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></TextField>
+    </bottom>
+</BorderPane>
